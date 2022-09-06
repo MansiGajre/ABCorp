@@ -1,4 +1,4 @@
-package ObjectRepository;
+package com.crm.pages.CRMLogin;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
