@@ -25,6 +25,8 @@ public class TC01VerifyCRMLogin extends SetUp
 			throw new SkipException(
 					"Skipping the test VerifyCRMLogin as the Run mode is NO");
 		}
+		//setUpTest to launch browser
+		setUpTest1(sheetName);
 	   		//login to CRM
 				login = new LoginPage();
 				login.CRMLogin(sheetName);

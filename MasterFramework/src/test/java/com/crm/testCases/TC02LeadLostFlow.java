@@ -1,11 +1,10 @@
-package TestScript;
-
+package com.crm.testCases;
 import org.testng.SkipException;
 import org.testng.annotations.Test;
-import CommonUtility.CommonMethods;
-import CommonUtility.SetUp;
-import ObjectRepository.LeadLost;
-import ObjectRepository.LoginPage;
+import com.crm.commonUtilities.CommonMethods;
+import com.crm.pages.CRMLogin.LeadLost;
+import com.crm.pages.CRMLogin.LoginPage;
+import com.crm.base.SetUp;
 
 
 public class TC02LeadLostFlow extends SetUp {
@@ -19,20 +18,20 @@ public class TC02LeadLostFlow extends SetUp {
 	String sheetName = "LeadLostFlow";
 	  
 	 //To check  testcase runmode from excel (Yes/No)
-	  if (!(CommonMethods.isTestRunnable("LeadLostFlow"))) {
+	  if (!(CommonMethods.isTestRunnable("LeadLostFlow", sheetName))) {
 
 			throw new SkipException(
 					"Skipping the test LeadLostFlow as the Run mode is NO");
 		
 		}
-	//setUpTest to launch browser
-		setUpTest(sheetName);
+		//setUpTest to launch browser
+		setUpTest1(sheetName);
 		//login to CRM
-		login = new LoginPage(driver);
+		login = new LoginPage();
 		login.CRMLogin(sheetName);
 		
 		
-	  leadf= new LeadLost(driver);
+	  leadf= new LeadLost();
 	  leadf.Client(sheetName);
 	  
 	  

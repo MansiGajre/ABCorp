@@ -16,11 +16,11 @@ public class LoginPage extends TestListeners
 {
 	public static Logger log =LogManager.getLogger(LoginPage.class.getName());
 	
-	public LoginPage(WebDriver driver)
+	/*public LoginPage(WebDriver driver)
 	{
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
-	}
+	}*/
 	
 	//Login Page
 	

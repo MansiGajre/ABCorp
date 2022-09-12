@@ -1,16 +1,13 @@
-package TestScript;
-
+package com.crm.testCases;
 import org.testng.SkipException;
 import org.testng.annotations.Test;
-import CommonUtility.CommonMethods;
-import CommonUtility.SetUp;
-import ObjectRepository.LoginPage;
-import ObjectRepository.ProspectLeadWon;
-
+import com.crm.commonUtilities.CommonMethods;
+import com.crm.base.SetUp;
+import com.crm.pages.CRMLogin.LoginPage;
 
 public class TC06ProspectLeadWon extends SetUp {
 	public LoginPage login;
-	public ProspectLeadWon Prospectleadwon;
+	public ProspectLeadWon pleadwon;
 @Test
 	public void ProspectLeadWon() throws Exception
 	{
@@ -19,21 +16,21 @@ public class TC06ProspectLeadWon extends SetUp {
 	String sheetName = "ProspectLeadWon";
 	  
 	 //To check  testcase runmode from excel (Yes/No)
-	  if (!(CommonMethods.isTestRunnable("ProspectLeadWon"))) {
+	  if (!(CommonMethods.isTestRunnable("ProspectLeadWon", sheetName))) {
 
 			throw new SkipException(
 					"Skipping the test ProspectLeadWon as the Run mode is NO");
 		
 		}
 	//setUpTest to launch browser
-		setUpTest(sheetName);
+		setUpTest1(sheetName);
 		//login to CRM
-		login = new LoginPage(driver);
+		login = new LoginPage();
 		login.CRMLogin(sheetName);
 		
 		
-		Prospectleadwon= new ProspectLeadWon(driver);
-		Prospectleadwon.NTBLeadWon(sheetName);
+		pleadwon= new ProspectLeadWon();
+		pleadwon.NTBLeadWon(sheetName);
 		//login.Logout();
 	  
 	}

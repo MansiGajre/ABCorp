@@ -1,4 +1,4 @@
-package ObjectRepository;
+package com.crm.pages.CRMLogin;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -7,17 +7,17 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import CommonUtility.CommonMethods;
-import CommonUtility.ScreenShot;
-import CommonUtility.SetUp;
+import com.crm.commonUtilities.CommonMethods;
+import com.crm.commonUtilities.ScreenShot;
+import com.crm.base.SetUp;
 
 public class LeadLost extends SetUp {
 	public static Logger log =LogManager.getLogger(LeadLost.class.getName());
-	public LeadLost(WebDriver driver)
+	/*public LeadLost(WebDriver driver)
 	{
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
-	}
+	}*/
 //Navigate to Client Object
 	@FindBy(xpath="//i[@class='icon icon-obj7']")
 	private WebElement ClientObject;
@@ -174,121 +174,121 @@ public void Client(String sheetName) throws Exception
 {
 			Thread.sleep(2000);
 		//Navigate to Client Object
-			CommonMethods.highLight(ClientObject);
-			CommonMethods.Click(ClientObject);
+			CommonMethods.highLight("ClientObject_XPATH");
+			CommonMethods.Click("ClientObject_XPATH");
 			ScreenShot.takeSnapShot("LeadLost", "Pass");
 			//CommonMethods.ExWait(ClientSearch);
 			Thread.sleep(10000);
-			CommonMethods.scrollByVisibilityofElement(ClientSearch);
+			CommonMethods.scrollByVisibilityofElement("ClientSearch_XPATH");
 		//Search Client
-			CommonMethods.highLight(ClientSearch);
-			CommonMethods.Click(ClientSearch);
-			CommonMethods.highLight(SearchBy);
-			CommonMethods.Click(SearchBy);
-			CommonMethods.selectByText(SearchBy, sheetName, "SearchBy", 1);
-			CommonMethods.input(SearchText, sheetName, "ClientName",1);
+			CommonMethods.highLight("ClientSearch_XPATH");
+			CommonMethods.Click("ClientSearch_XPATH");
+			CommonMethods.highLight("SearchBy_XPATH");
+			CommonMethods.Click("SearchBy_XPATH");
+			CommonMethods.selectByText("SearchBy_XPATH", sheetName, "SearchBy", 1);
+			CommonMethods.input("SearchText_XPATH", sheetName, "ClientName",1);
 			Thread.sleep(10000);
 		//Select Client
-			CommonMethods.highLight(SelectClient);
-			CommonMethods.Click(SelectClient);
+			CommonMethods.highLight("SelectClient_XPATH");
+			CommonMethods.Click("SelectClient_XPATH");
 		//Click on Leads and deals tab
-			CommonMethods.highLight(LeadsandDealstab);
-			CommonMethods.Click(LeadsandDealstab);
+			CommonMethods.highLight("LeadsandDealstab_XPATH");
+			CommonMethods.Click("LeadsandDealstab_XPATH");
 			Thread.sleep(10000);
-			CommonMethods.scrollByVisibilityofElement(NewLead);
-			CommonMethods.highLight(NewLead);
-			CommonMethods.Click(NewLead);
+			CommonMethods.scrollByVisibilityofElement("NewLead_XPATH");
+			CommonMethods.highLight("NewLead_XPATH");
+			CommonMethods.Click("NewLead_XPATH");
 			Thread.sleep(10000);
 		//Select from Existing Contact
-			CommonMethods.selectByText(ExistingContact, sheetName, "Select from Existing Contact", 1);
+			CommonMethods.selectByText("ExistingContact_XPATH", sheetName, "Select from Existing Contact", 1);
 		//Enter FirstName
-			CommonMethods.scrollByVisibilityofElement(FirstName);
+			CommonMethods.scrollByVisibilityofElement("FirstName_XPATH");
 			Thread.sleep(2000);
-			CommonMethods.input(FirstName, sheetName, "First Name", 1);
+			CommonMethods.input("FirstName_XPATH", sheetName, "First Name", 1);
 		//Enter LastName
-			CommonMethods.input(LastName, sheetName, "Last Name", 1);
+			CommonMethods.input("LastName_XPATH", sheetName, "Last Name", 1);
 		//Enter Mobile Number	
-			CommonMethods.scrollByVisibilityofElement(MobileNumber);
-			CommonMethods.input(MobileNumber, sheetName, "Mobile No.", 1);
+			CommonMethods.scrollByVisibilityofElement("MobileNumber_XPATH");
+			CommonMethods.input("MobileNumber_XPATH", sheetName, "Mobile No.", 1);
 		//Select LeadSource
 			Thread.sleep(2000);
-			CommonMethods.selectByText(LeadSource, sheetName, "Lead Source", 1);
+			CommonMethods.selectByText("LeadSource_XPATH", sheetName, "Lead Source", 1);
 		//Select LeadPriority
 			Thread.sleep(2000);
-			CommonMethods.selectByText(LeadPriority, sheetName, "Lead Priority", 1);
+			CommonMethods.selectByText("LeadPriority_XPATH", sheetName, "Lead Priority", 1);
 		//Select CountryofBooking
-			CommonMethods.selectByText(CountryofBooking, sheetName, "Country of Booking", 1);
-			CommonMethods.scrollByVisibilityofElement(ProductCategory);
+			CommonMethods.selectByText("CountryofBooking_XPATH", sheetName, "Country of Booking", 1);
+			CommonMethods.scrollByVisibilityofElement("ProductCategory_XPATH");
 		//Select Product Category
-			CommonMethods.input(ProductCategory,sheetName,"Product Category",1);
+			CommonMethods.input("ProductCategory_XPATH",sheetName,"Product Category",1);
 			Thread.sleep(10000);
 		//Select from PickProductCategory
-			CommonMethods.Click(PickProductCategory);
+			CommonMethods.Click("PickProductCategory_XPATH");
 			Thread.sleep(10000);
 		//Select Product
-			CommonMethods.selectByText(Product, sheetName, "Product", 1);
+			CommonMethods.selectByText("Product_XPATH", sheetName, "Product", 1);
 			Thread.sleep(10000);
 		//Select from Currency
-			CommonMethods.Click(Currency);
+			CommonMethods.Click("Currency_XPATH");
 			Thread.sleep(2000);
 		//Enter Currency
-			CommonMethods.input(EnterCurrency, sheetName, "Currency", 1);
+			CommonMethods.input("EnterCurrency_XPATH", sheetName, "Currency", 1);
 		//Enter SearchCurrency
-			CommonMethods.Click(SearchCurrency);
+			CommonMethods.Click("SearchCurrency_XPATH");
 			Thread.sleep(2000);
 		//Select Currency
-			CommonMethods.Click(SelectCurrency);
+			CommonMethods.Click("SelectCurrency_XPATH");
 			Thread.sleep(2000);
 		//Enter Amount
-			CommonMethods.input(Amount, sheetName, "Amount", 1);
+			CommonMethods.input("Amount_XPATH", sheetName, "Amount", 1);
 		//Enter Net Expected Revenue
-			CommonMethods.input(NetExpectedRevenue, sheetName, "Net Expected Revenue", 1);
+			CommonMethods.input("NetExpectedRevenue_XPATH", sheetName, "Net Expected Revenue", 1);
 			Thread.sleep(10000);
 		//Select Tenor
-			CommonMethods.selectByText(Tenor, sheetName, "Tenor", 1);
+			CommonMethods.selectByText("Tenor_XPATH", sheetName, "Tenor", 1);
 		//Enter Rate Offered
-			CommonMethods.input(RateOffered, sheetName, "Rate Offered", 1);
+			CommonMethods.input("RateOffered_XPATH", sheetName, "Rate Offered", 1);
 		//Enter Due Date
-			CommonMethods.input(DueDate, sheetName, "Due Date", 1);
+			CommonMethods.input("DueDate_XPATH", sheetName, "Due Date", 1);
 		//Save Lead in New Lead status		
 			Thread.sleep(5000);
-			CommonMethods.Click(Savelead);
+			CommonMethods.Click("Savelead_XPATH");
 		//Toggle Leadview
-			CommonMethods.Click(Toggleview);
-			CommonMethods.scrollByVisibilityofElement(EditLead);
+			CommonMethods.Click("Toggleview_XPATH");
+			CommonMethods.scrollByVisibilityofElement("EditLead_XPATH");
 		//Edit New Lead
-			CommonMethods.Click(EditLead);
+			CommonMethods.Click("EditLead_XPATH");
 		//Lead Processing
-			CommonMethods.Click(Leadprocessing);
+			CommonMethods.Click("Leadprocessing_XPATH");
 			Thread.sleep(5000);
 		//Appointment fixed status
-			CommonMethods.Click(AppointmentFixed);
+			CommonMethods.Click("AppointmentFixed_XPATH");
 			Thread.sleep(500);
 		//Enter Appointment Date
-			CommonMethods.input(Appointmentdate, sheetName, "Appointment Date", 1);
+			CommonMethods.input("Appointmentdate_XPATH", sheetName, "Appointment Date", 1);
 		//Enter Appointment Time
-			CommonMethods.input(Appointmenttime, sheetName, "Appointment Time", 1);
+			CommonMethods.input("Appointmenttime_XPATH", sheetName, "Appointment Time", 1);
 		//Save Lead in Appointment fixed status
-			CommonMethods.Click(Saveappointment);
+			CommonMethods.Click("Saveappointment_XPATH");
 		//Toggle Leadview
-			CommonMethods.Click(Toggleview);
-			CommonMethods.scrollByVisibilityofElement(EditLead);
-			CommonMethods.Click(EditLead);
+			CommonMethods.Click("Toggleview_XPATH");
+			CommonMethods.scrollByVisibilityofElement("EditLead_XPATH");
+			CommonMethods.Click("EditLead_XPATH");
 		//Document collected status
-			CommonMethods.Click(Documentcollected);
+			CommonMethods.Click("Documentcollected_XPATH");
 			Thread.sleep(5000);
-			CommonMethods.Click(SaveDocument);
+			CommonMethods.Click("SaveDocument_XPATH");
 			Thread.sleep(2000);
-			CommonMethods.Click(Toggleview);
-			CommonMethods.scrollByVisibilityofElement(EditLead);
-			CommonMethods.Click(EditLead);
+			CommonMethods.Click("Toggleview_XPATH");
+			CommonMethods.scrollByVisibilityofElement("EditLead_XPATH");
+			CommonMethods.Click("EditLead_XPATH");
 		//Lead Closure	
 			Thread.sleep(1000);
-			CommonMethods.Click(LeadClosure);
+			CommonMethods.Click("LeadClosure_XPATH");
 			Thread.sleep(1000);
 		//Lead Lost Reason
-			CommonMethods.selectByText(LeadLostreason, sheetName, "Lead Lost Reason", 1);
-			CommonMethods.Click(Saveleadlost);
+			CommonMethods.selectByText("LeadLostreason_XPATH", sheetName, "Lead Lost Reason", 1);
+			CommonMethods.Click("Saveleadlost_XPATH");
 }
 
 }
