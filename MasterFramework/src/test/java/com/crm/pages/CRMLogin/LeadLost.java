@@ -1,12 +1,6 @@
 package com.crm.pages.CRMLogin;
-
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
-
 import com.crm.commonUtilities.CommonMethods;
 import com.crm.commonUtilities.ScreenShot;
 import com.crm.base.SetUp;
@@ -17,7 +11,7 @@ public class LeadLost extends SetUp {
 	{
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
-	}*/
+	}
 //Navigate to Client Object
 	@FindBy(xpath="//i[@class='icon icon-obj7']")
 	private WebElement ClientObject;
@@ -169,29 +163,36 @@ public class LeadLost extends SetUp {
 
 //Save Lead in lead lost status
 	@FindBy(xpath="(//span[@class=\"ff-regular\"])[2]")
-	private WebElement Saveleadlost;
+	private WebElement Saveleadlost;*/
 public void Client(String sheetName) throws Exception
 {
 			Thread.sleep(2000);
 		//Navigate to Client Object
 			CommonMethods.highLight("ClientObject_XPATH");
 			CommonMethods.Click("ClientObject_XPATH");
-			ScreenShot.takeSnapShot("LeadLost", "Pass");
+			//ScreenShot.takeSnapShot("LeadLost", "Pass");
 			//CommonMethods.ExWait(ClientSearch);
 			Thread.sleep(10000);
-			CommonMethods.scrollByVisibilityofElement("ClientSearch_XPATH");
+			CommonMethods.scrollByVisibilityofElement("SelectView_XPATH");
+			CommonMethods.selectByText("SelectView_XPATH", sheetName, "View", 1);
+			CommonMethods.selectByText("SubCategory_XPATH", sheetName, "View Sub Category", 1);
+			CommonMethods.Click("Arrowclick_XPATH");
+			Thread.sleep(2000);
+			//CommonMethods.scrollByVisibilityofElement("ClientSearch_XPATH");
 		//Search Client
 			CommonMethods.highLight("ClientSearch_XPATH");
 			CommonMethods.Click("ClientSearch_XPATH");
 			CommonMethods.highLight("SearchBy_XPATH");
 			CommonMethods.Click("SearchBy_XPATH");
 			CommonMethods.selectByText("SearchBy_XPATH", sheetName, "SearchBy", 1);
+			Thread.sleep(10000);
 			CommonMethods.input("SearchText_XPATH", sheetName, "ClientName",1);
 			Thread.sleep(10000);
 		//Select Client
 			CommonMethods.highLight("SelectClient_XPATH");
 			CommonMethods.Click("SelectClient_XPATH");
 		//Click on Leads and deals tab
+			Thread.sleep(10000);
 			CommonMethods.highLight("LeadsandDealstab_XPATH");
 			CommonMethods.Click("LeadsandDealstab_XPATH");
 			Thread.sleep(10000);

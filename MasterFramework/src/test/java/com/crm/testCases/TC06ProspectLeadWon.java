@@ -4,10 +4,11 @@ import org.testng.annotations.Test;
 import com.crm.commonUtilities.CommonMethods;
 import com.crm.base.SetUp;
 import com.crm.pages.CRMLogin.LoginPage;
+import com.crm.pages.CRMLogin.ProspectLeadWon;
 
 public class TC06ProspectLeadWon extends SetUp {
 	public LoginPage login;
-	public ProspectLeadWon pleadwon;
+	public ProspectLeadWon Prospectleadw;
 @Test
 	public void ProspectLeadWon() throws Exception
 	{
@@ -29,8 +30,8 @@ public class TC06ProspectLeadWon extends SetUp {
 		login.CRMLogin(sheetName);
 		
 		
-		pleadwon= new ProspectLeadWon();
-		pleadwon.NTBLeadWon(sheetName);
+		Prospectleadw= new ProspectLeadWon();
+		Prospectleadw.NTBLeadWon(sheetName);
 		//login.Logout();
 	  
 	}

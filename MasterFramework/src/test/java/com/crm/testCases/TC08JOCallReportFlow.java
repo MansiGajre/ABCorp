@@ -2,10 +2,10 @@ package com.crm.testCases;
 
 import org.testng.SkipException;
 import org.testng.annotations.Test;
-
 import com.crm.commonUtilities.CommonMethods;
 import com.crm.pages.CRMLogin.LoginPage;
 import com.crm.base.SetUp;
+import com.crm.pages.CRMLogin.CallReportJOFlow;
 
 
 
@@ -21,7 +21,7 @@ public void JOCallReportFlow() throws Exception
 String sheetName = "JOCallReportFlow";
   
  //To check  testcase runmode from excel (Yes/No)
-  if (!(CommonMethods.isTestRunnable("JOCallReportFlow"))) {
+  if (!(CommonMethods.isTestRunnable("JOCallReportFlow", sheetName))) {
 
 		throw new SkipException(
 				"Skipping the test JOCallReportFlow as the Run mode is NO");
@@ -35,7 +35,7 @@ String sheetName = "JOCallReportFlow";
 	login.CRMLogin(sheetName);
 	
 	
-	jocallreport= new CallReportJOFlow(driver);
+	jocallreport= new CallReportJOFlow();
 	jocallreport.CogentJO(sheetName);
 
 

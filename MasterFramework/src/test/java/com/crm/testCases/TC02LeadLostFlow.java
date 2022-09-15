@@ -24,8 +24,8 @@ public class TC02LeadLostFlow extends SetUp {
 					"Skipping the test LeadLostFlow as the Run mode is NO");
 		
 		}
-		//setUpTest to launch browser
-		setUpTest1(sheetName);
+		/*//setUpTest to launch browser
+		setUpTest1(sheetName);*/
 		//login to CRM
 		login = new LoginPage();
 		login.CRMLogin(sheetName);

@@ -51,12 +51,12 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-AutomationTest" class="navigator-link ">
-                    <span>C:\Users\Vrunda Vibhute\git\MasterFramework\MasterFramework\src\test\resources\RunnerFiles\testng.xml</span>
+                    <span>C:\Users\mansi.gajre\git\ABCorp\MasterFramework\src\test\resources\RunnerFiles\testng.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
                   <a href="#" panel-name="testlist-AutomationTest" class="navigator-link ">
-                    <span class="test-stats">1 test</span>
+                    <span class="test-stats">2 tests</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -93,7 +93,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method, 1 failed,   </span>
+                    <span class="method-stats">2 methods, 1 failed,  1 skipped,  </span>
                   </li>
                   <li>
                     <span class="method-list-title failed">Failed methods</span>
@@ -104,10 +104,24 @@
                     <div class="method-list-content failed suite-AutomationTest">
                       <span>
                         <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-AutomationTest" title="com.crm.testCases.TC01VerifyCRMLogin" class="method navigator-link" hash-for-method="VerifyCRMLogin">VerifyCRMLogin</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-AutomationTest" title="com.crm.testCases.TC02LeadLostFlow" class="method navigator-link" hash-for-method="LeadLostFlow">LeadLostFlow</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-AutomationTest -->
+                  </li>
+                  <li>
+                    <span class="method-list-title skipped">Skipped methods</span>
+                    <span class="show-or-hide-methods skipped">
+                      <a href="#" panel-name="suite-AutomationTest" class="hide-methods skipped suite-AutomationTest"> (hide)</a> <!-- hide-methods skipped suite-AutomationTest -->
+                      <a href="#" panel-name="suite-AutomationTest" class="show-methods skipped suite-AutomationTest"> (show)</a> <!-- show-methods skipped suite-AutomationTest -->
+                    </span>
+                    <div class="method-list-content skipped suite-AutomationTest">
+                      <span>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-AutomationTest" title="com.crm.testCases.TC01VerifyCRMLogin" class="method navigator-link" hash-for-method="VerifyCRMLogin">VerifyCRMLogin</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content skipped suite-AutomationTest -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -122,6 +136,36 @@
           <div class="suite-AutomationTest-class-failed">
             <div class="main-panel-header rounded-window-top">
               <img src="failed.png"/>
+              <span class="class-name">com.crm.testCases.TC02LeadLostFlow</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="LeadLostFlow">
+                  </a> <!-- LeadLostFlow -->
+                  <span class="method-name">LeadLostFlow</span>
+                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //span[text()=\&quot;Lead &amp; Deals\&quot;] (tried for 60 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.1.0&apos;, revision: &apos;87802e897b&apos;
+System info: host: &apos;MANSIGAJRE&apos;, ip: &apos;192.168.0.103&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.16&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 105.0.5195.102, chrome: {chromedriverVersion: 105.0.5195.52 (412c95e51883..., userDataDir: C:\Users\MANSI~1.GAJ\AppDat...}, goog:chromeOptions: {debuggerAddress: localhost:54786}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:54786/devtoo..., se:cdpVersion: 105.0.5195.102, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 29fa5138ce2cb88214d5052eff7b6e47
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:138)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
+	at com.crm.commonUtilities.CommonMethods.ExWait(CommonMethods.java:40)
+	at com.crm.commonUtilities.CommonMethods.highLight(CommonMethods.java:112)
+	at com.crm.pages.CRMLogin.LeadLost.Client(LeadLost.java:196)
+	at com.crm.testCases.TC02LeadLostFlow.LeadLostFlow(TC02LeadLostFlow.java:35)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+... Removed 27 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-AutomationTest-class-failed -->
+          <div class="suite-AutomationTest-class-skipped">
+            <div class="main-panel-header rounded-window-top">
+              <img src="skipped.png"/>
               <span class="class-name">com.crm.testCases.TC01VerifyCRMLogin</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -130,21 +174,19 @@
                   <a name="VerifyCRMLogin">
                   </a> <!-- VerifyCRMLogin -->
                   <span class="method-name">VerifyCRMLogin</span>
-                  <div class="stack-trace">java.lang.Error: Unresolved compilation problem: 
-	The constructor LoginPage(WebDriver) is undefined
-
-	at com.crm.testCases.TC01VerifyCRMLogin.VerifyCRMLogin(TC01VerifyCRMLogin.java:30)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+                  <div class="stack-trace">org.testng.SkipException: Skipping the test VerifyCRMLogin as the Run mode is NO
+	at com.crm.testCases.TC01VerifyCRMLogin.VerifyCRMLogin(TC01VerifyCRMLogin.java:25)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
 ... Removed 27 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-AutomationTest-class-failed -->
+          </div> <!-- suite-AutomationTest-class-skipped -->
         </div> <!-- panel AutomationTest -->
         <div panel-name="test-xml-AutomationTest" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\Vrunda Vibhute\git\MasterFramework\MasterFramework\src\test\resources\RunnerFiles\testng.xml</span>
+            <span class="header-content">C:\Users\mansi.gajre\git\ABCorp\MasterFramework\src\test\resources\RunnerFiles\testng.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -159,6 +201,11 @@
       &lt;class name=&quot;com.crm.testCases.TC01VerifyCRMLogin&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Test To Verify CRM Login --&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;Test To Verify LeadLostFlow&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;com.crm.testCases.TC02LeadLostFlow&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Test To Verify LeadLostFlow --&gt;
 &lt;/suite&gt; &lt;!-- AutomationTest --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -171,6 +218,9 @@
             <ul>
               <li>
                 <span class="test-name">Test To Verify CRM Login (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">Test To Verify LeadLostFlow (1 class)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -196,16 +246,20 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
+data.addRows(2);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'VerifyCRMLogin')
-data.setCell(0, 2, 'com.crm.testCases.TC01VerifyCRMLogin')
-data.setCell(0, 3, 10);
+data.setCell(0, 1, 'LeadLostFlow')
+data.setCell(0, 2, 'com.crm.testCases.TC02LeadLostFlow')
+data.setCell(0, 3, 129455);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'VerifyCRMLogin')
+data.setCell(1, 2, 'com.crm.testCases.TC01VerifyCRMLogin')
+data.setCell(1, 3, 2164);
 window.suiteTableData['AutomationTest']= { tableData: data, tableDiv: 'times-div-AutomationTest'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 10 ms</span>
+              <span class="suite-total-time">Total running time: 2 minutes</span>
               <div id="times-div-AutomationTest">
               </div> <!-- times-div-AutomationTest -->
             </div> <!-- times-div -->
@@ -233,8 +287,6 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">com.crm.testCases.TC01VerifyCRMLogin</div> <!-- chronological-class-name -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
                 <span class="method-name">VerifyCRMLogin</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- test-method -->
@@ -242,7 +294,20 @@ return data;
                 <img src="failed.png">
                 </img>
                 <span class="method-name">tearDownTest</span>
-                <span class="method-start">3542 ms</span>
+                <span class="method-start">2183 ms</span>
+              </div> <!-- configuration-test after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.crm.testCases.TC02LeadLostFlow</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">LeadLostFlow</span>
+                <span class="method-start">2744 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-test after">
+                <span class="method-name">tearDownTest</span>
+                <span class="method-start">135901 ms</span>
               </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

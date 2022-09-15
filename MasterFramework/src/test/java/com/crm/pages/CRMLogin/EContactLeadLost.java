@@ -1,14 +1,10 @@
 package com.crm.pages.CRMLogin;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.openqa.selenium.WebDriver;
-
-import org.openqa.selenium.support.PageFactory;
-
 import com.crm.commonUtilities.CommonMethods;
 import com.crm.commonUtilities.ScreenShot;
-
 import com.crm.base.SetUp;
+
 //Existing Contact Lead Lost flow
 public class EContactLeadLost extends SetUp {
 	public static Logger log =LogManager.getLogger(EContactLeadLost.class.getName());

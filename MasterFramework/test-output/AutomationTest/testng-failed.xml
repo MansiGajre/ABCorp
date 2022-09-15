@@ -14,4 +14,14 @@
       </class> <!-- com.crm.testCases.TC01VerifyCRMLogin -->
     </classes>
   </test> <!-- Test To Verify CRM Login(failed) -->
+  <test thread-count="5" name="Test To Verify LeadLostFlow(failed)">
+    <classes>
+      <class name="com.crm.testCases.TC02LeadLostFlow">
+        <methods>
+          <include name="tearDownTest"/>
+          <include name="LeadLostFlow"/>
+        </methods>
+      </class> <!-- com.crm.testCases.TC02LeadLostFlow -->
+    </classes>
+  </test> <!-- Test To Verify LeadLostFlow(failed) -->
 </suite> <!-- Failed suite [AutomationTest] -->
